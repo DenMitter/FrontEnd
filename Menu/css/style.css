@@ -58,39 +58,56 @@ body {
 }
 .navigation span {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 12px;
     height: 12px;
     background-color: #ffffff;
     transform: translate(calc(25px * var(--x)),calc(25px * var(--y)));
     transition: transform 0.3s, width 0.3s, height 0.3s, background 0.3s;
     transition-delay: calc(0.1s * var(--i));
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 2px;
 }
 .navigation span ion-icon {
     transition: 0.3s;
     font-size: 0em;
     color: #ffffff;
 }
-.navigation.active span ion-icon {font-size: 1.75em;}
+.navigation.active span ion-icon {font-size: 2em;}
 .navigation.active span:hover ion-icon {
-    color: #2dfc52;
-    filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52) drop-shadow(0 0 15x #2dfc52);
+    color: #2d5dfc;
+    filter: drop-shadow(0 0 2px #2d5dfc); 
+    filter: drop-shadow(0 0 7px #2d5dfc); 
+    filter: drop-shadow(0 0 15x #2d5dfc);
 }
 .close {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 12px;
     height: 12px;
     background-color: #ffffff;
     transition: 0.5s;
     transition-delay: 0.3s;
     pointer-events: none;
+    border-radius: 2px;
 }
 .navigation.active ~ .close {
     width: 75px;
     height: 75px;
     pointer-events: initial;
     transition-delay: 0.7s;
-    background-color: #2dfc52;
+    background-color: #2d5dfc;
+}
+.navigation ~ .close ion-icon {
+    font-size: 2.75em;
+    scale: 0;
+    color: #10131c;
+    transition: 0.3s;
+}
+.navigation.active ~ .close ion-icon {
+    scale: 1;
+    transition-delay: 1s;
 }
