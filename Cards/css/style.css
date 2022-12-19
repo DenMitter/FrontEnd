@@ -29,6 +29,9 @@ body {min-height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container .card:nth-child(1) {--clr: #ff0057;}
+.container .card:nth-child(2) {--clr: #0051ff;}
+.container .card:nth-child(3) {--clr: #00cf1c;}
 .container {
     width: 1000px;
     position: relative;
