@@ -1,0 +1,160 @@
+/* ~~~~~~~~~~~~~~~ Reset Style ~~~~~~~~~~~~~~~ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+html {height: 100%;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+body {
+    color: white;
+    background-color: #0c0c0c;
+    /* background: linear-gradient(160deg, #0c0c0c 65%, #7700ff 45%); */
+    /* background: url(../img/background.png); */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+body::before {
+    content: '';
+    position: absolute;
+    top: 65%;
+    left: 82%;
+    height: 205px;
+    width: 280px;
+    background-color: #7700ff;
+    transform-origin: bottom right;
+    filter: blur(35px);
+}
+body::after {
+    content: '';
+    position: absolute;
+    transform: rotate(220deg);
+    top: -20%;
+    left: -25%;
+    height: 205px;
+    width: 280px;
+    background-color: #7700ff;
+    transform-origin: bottom right;
+    filter: blur(35px);
+}
+.form {
+    /* background-color: #ffffff27; */
+    /* border: solid 2px #2222223a; */
+    border-radius: 20px;
+    background-color: #121212;
+    backdrop-filter: blur(10px);
+    width: 23%;
+    height: 420px;
+    margin: 120px auto;
+    padding: 48px;
+    overflow: hidden;
+}
+.form::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -46%;
+    height: 385px;
+    width: 390px;
+    background: linear-gradient(0deg, transparent, #7700ff 0%, #7700ff 100%);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    filter: blur(35px);
+}
+.form::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -46%;
+    height: 385px;
+    width: 390px;
+    background: linear-gradient(0deg, transparent, #7700ff 0%, #7700ff 100%);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+    filter: blur(35px);
+}
+.form_items__all {
+    position: absolute;
+    background-color: #161616;
+    inset: 3px;
+    z-index: 1;
+    border-radius: 18px;
+    padding-top: 45px;
+}
+.form_title {
+    text-align: center;
+    margin: 50px auto 0 auto;
+    font-size: 32px;
+    color: #7700ff;
+    width: 80%;
+}
+.form_items {
+    width: 80%;
+    margin: 31px auto;
+}
+.form_item__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px #7700ff;
+    width: 100%;
+    padding: 19px 0 5px;
+    margin-top: 12px;
+    color: #ffffff;
+    outline: none;
+    transition: 0.3s;
+}
+.form_item__label {
+    position: absolute;
+    margin-top: -24px;
+    display: flex;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #ffffff65;
+}
+input::-webkit-input-placeholder {color: transparent;}
+.form_item__input:focus~.form_item__label,
+.form_item__input:not(:placeholder-shown)~.form_item__label {
+    margin-top: -38px;
+    color: #7700ff;
+}
+.form_button {
+    display: inline-block;
+    background-color: #7700ff;
+    box-shadow: 0 5px 14px #7700ff52;
+    border: solid 2px #7700ff;
+    border-radius: 7px;
+    padding: 17px 35px;
+    text-decoration: none;
+    color: #ffffff;
+    margin: -12px 10.3%;
+    transition: 0.3s;
+}
+.form_button:hover {
+    box-shadow: 0 5px 25px #7700ff7e;
+    background-color: #161616;
+    border: solid 2px #7700ff;
+}
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+@keyframes animate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
