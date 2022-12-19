@@ -1,0 +1,189 @@
+/* ~~~~~~~~~~~~~~~ Reset Style ~~~~~~~~~~~~~~~ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+html {height: 100%;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+body {
+    min-height: 100vh;
+    background-color: #25335b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container {
+    position: relative;
+    top: -80px;
+    transform: skewY(-20deg);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(100deg);
+    }
+}
+.cube {
+    z-index: 2;
+    position: relative;
+}
+.cube:nth-child(2) {
+    z-index: 1;
+    translate: -60px -60px;
+}
+.cube:nth-child(3) {
+    z-index: 3;
+    translate: 60px 60px;
+}
+.cube div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    translate: calc(-70px * var(--x)) calc(-60px * var(--y));
+}
+.cube div span {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #dcdcdc;
+    z-index: calc(1 * var(--i));
+    transition: 1s;
+}
+.cube div span:hover {
+    transition: 0s;
+    background-color: #1a6aff;
+    filter: drop-shadow(0 0 30px #1a6aff);
+}
+.cube div span::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background-color: #ffffff;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 1s;
+}
+.cube div span:hover::before {
+    transition: 0s;
+    background-color: #2e77ff;
+}
+.cube div span::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #e6e6e6;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 1s;
+}
+.cube div span:hover::after {
+    transition: 0s;
+    background-color: #2e77ff;
+}
+
+/*.container {
+    position: relative;
+    top: -70px;
+    transform: skewY(-20deg);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(100deg);
+    }
+}
+.cube {
+    z-index: 2;
+    position: relative;
+}
+.cube:nth-child(2) {
+    z-index: 1;
+    translate: -80px -80px;
+}
+.cube:nth-child(3) {
+    z-index: 3;
+    translate: 80px 80px;
+}
+.cube div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    translate: calc(-90px * var(--x)) calc(-80px * var(--y));
+}
+.cube div span {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-color: #dcdcdc;
+    z-index: calc(1 * var(--i));
+    transition: 1s;
+}
+.cube div span:hover {
+    transition: 0s;
+    background-color: #1a6aff;
+    filter: drop-shadow(0 0 30px #1a6aff);
+}
+.cube div span::before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    width: 60px;
+    height: 100%;
+    background-color: #ffffff;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 1s;
+}
+.cube div span:hover::before {
+    transition: 0s;
+    background-color: #2e77ff;
+}
+.cube div span::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #e6e6e6;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 1s;
+}
+.cube div span:hover::after {
+    transition: 0s;
+    background-color: #2e77ff;
+}*/
