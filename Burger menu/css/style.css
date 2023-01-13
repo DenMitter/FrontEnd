@@ -3,11 +3,9 @@
   margin: 0;
   padding: 0;
 }
-
 html, body {
   height: 100%;
 }
-
 body:before, body:after {
   content: "";
   display: block;
@@ -18,8 +16,6 @@ body:after {
   background: #1539CF;
 }
 
-/* MAIN VARIABLES FOR CUSTOMIZATION */
-/* -------------------------------- */
 .nav {
   overflow: hidden;
   position: absolute;
