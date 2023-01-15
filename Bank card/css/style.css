@@ -1,0 +1,152 @@
+@import url('https://fonts.cdnfonts.com/css/akzidenz-grotesk-next');
+/* ~~~~~~~~~~~~~~~ Reset Style ~~~~~~~~~~~~~~~ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+html {height: 100%;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    background-color: #161a23;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.card-pay {
+    background: radial-gradient(95.25% 234.37% at 9.5% 11.76%, 
+              rgba(255, 255, 255, 0.35) 0%, 
+              rgba(196, 196, 196, 0.035) 100%);
+    box-shadow: 0px 13px 17px rgba(56, 57, 73, 0.6), 
+                inset 0px 3px 12px 1px 
+                rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12.5px);
+    border-radius: 25px;
+    border: 0.4px solid rgba(255, 255, 255, 0.3);
+    width: 380px;
+    height: 225px;
+    padding: 32px 36px;
+    font-family: 'Akzidenz-Grotesk Next', sans-serif;
+}
+.card-pay-items .card-pay_circle:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    width: 282px;
+    height: 282px;
+    border-radius: 50%;
+    background: conic-gradient(from 180deg at 50% 50%, 
+              rgba(235, 235, 224, 0.65) 0deg, 
+              rgba(222, 222, 222, 0) 360deg);
+    margin: -125px -135px;
+    z-index: -1;
+}
+.card-pay-items .card-pay_circle:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    width: 149px;
+    height: 149px;
+    border-radius: 50%;
+    background: conic-gradient(from 180deg at 50% 50%, 
+              rgba(235, 235, 224, 0.65) 0deg, 
+              rgba(222, 222, 222, 0) 360deg);
+    margin: 205px 70px;
+    transform: rotate(-90deg);
+    z-index: -1;
+}
+.card-pay-items .card-pay_circle:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
+    background: conic-gradient(from 180deg at 50% 50%, 
+              rgba(235, 235, 224, 0.65) 0deg, 
+              rgba(222, 222, 222, 0) 360deg);
+    margin: -65px 360px;
+    z-index: -1;
+}
+.card-pay-items .card-pay_circle:nth-child(4)::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(from 180deg at 50% 50%, 
+              rgba(235, 235, 224, 0.65) 0deg, 
+              rgba(222, 222, 222, 0) 360deg);
+    margin: 230px 380px;
+    transform: rotate(90deg);
+    z-index: -1;
+}
+.card-pay_head {
+    justify-content: space-between;
+    display: flex;
+}
+.card-pay_logo::before {
+    content: '';
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    background: radial-gradient(97.5% 239.91% at 9.5% 11.76%, 
+              rgba(255, 255, 255, 0.2) 0%, 
+              rgba(196, 196, 196, 0.02) 100%);
+    border: 0.1px solid rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(7.5px);
+    border-radius: 50%;
+    margin: -7px -65px;
+}
+.card-pay_logo::after {
+    content: '';
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    background: radial-gradient(97.5% 239.91% at 9.5% 11.76%, 
+              rgba(255, 255, 255, 0.2) 0%, 
+              rgba(196, 196, 196, 0.02) 100%);
+    border: 0.1px solid rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(7.5px);
+    border-radius: 50%;
+    margin: -7px -41px;
+}
+.card-pay_text {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 97px;
+}
+.cad-pay_number {
+    font-size: 27px;
+    margin: 0 0 10px;
+}
+.card-pay_min-text {
+    font-size: 10px;
+    font-weight: 400;
+}
+.card-pay_valid-date {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 4px 0 21px;
+}
+.card-pay_name {
+    font-size: 19px;
+    font-weight: bold;
+}
+.card-pay-items {margin-top: 105px;}
